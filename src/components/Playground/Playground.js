@@ -51,11 +51,11 @@ export default {
   },
   methods: {
     submitForm(form) {
-      this.$refs[form].validate((valid) => {
+      this.$refs[form].validate((valid) => { // validates form
         if (valid) {
-          alert('submit!');
+          alert('submit!'); // another popup
         } else {
-          console.log('error submit!!');
+          console.log('error submit!!'); // sent to console message
           return false;
         }
       });
