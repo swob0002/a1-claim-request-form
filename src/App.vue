@@ -2,18 +2,19 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <PlayGround/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/Playground.vue'
+import PlayGround from './components/PlayGround/PlayGround.vue';
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    Playground
+    PlayGround
   }
-}
+};
 </script>
 
 <style>

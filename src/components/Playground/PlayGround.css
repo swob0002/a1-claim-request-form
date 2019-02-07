@@ -1,0 +1,19 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+  .el-form {
+    flex-wrap: wrap;
+    width: 500px;
+  }
+
+  div {
+    text-align: center;
+  }
+  
+  p {
+    padding: 0 0 0 1rem;
+    margin: 0;
+  }
+  
