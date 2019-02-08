@@ -5,15 +5,16 @@ export default {
     data() {
 
       return {
-
+        // contains form data
         form: {
           firstName: '',
           lastName: '',
           email: '',
           subject: '',
           content: '',
-          agree: false
+          agree: [],
         },
+        // sets rules for form and error messaging
         rules: {
           firstName: [{
             required: true,
@@ -41,6 +42,7 @@ export default {
             trigger: 'blur'
           }],
           agree: [{
+            type: 'array',
             required: true,
             message: 'Must agree',
             trigger: 'change'
@@ -49,16 +51,20 @@ export default {
         dialogVisible: false
     }
   },
+
+  //
   methods: {
     submitForm(form) {
       this.$refs[form].validate((valid) => { // validates form
         if (valid) {
-          alert('submit!'); // another popup
-        } else {
-          console.log('error submit!!'); // sent to console message
+          alert('submit!'); // test
+        }
+        else {
+          alert('error submit!!'); // test
           return false;
         }
       });
     }
   }
 };
+

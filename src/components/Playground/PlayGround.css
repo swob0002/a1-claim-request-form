@@ -4,13 +4,9 @@
 
 
   .el-form {
-    flex-wrap: wrap;
     width: 500px;
   }
 
-  div {
-    text-align: center;
-  }
   
   p {
     padding: 0 0 0 1rem;

@@ -16,7 +16,11 @@
   <div>
 
     <!-- Form Beginning -->
-    <el-form :model="form" :rules="rules" ref="form" label-width="120px">
+    <el-form
+    :model="form"
+    :rules="rules"
+    ref="form"
+    label-width="120px">
 
       <!-- Input for First Name -->
       <el-form-item label="First Name" prop="firstName">
@@ -45,7 +49,9 @@
 
       <!-- Checkbox for Agreement -->
       <el-form-item prop="agree">
-        <el-checkbox label="I agree to give an A+" v-model="form.agree"></el-checkbox>
+        <el-checkbox-group v-model="form.agree">
+          <el-checkbox label="I agree to all terms and conditions" name="agree"></el-checkbox>
+        </el-checkbox-group>
       </el-form-item>
 
       <!-- Button to Submit -->
@@ -53,10 +59,13 @@
         <el-button type="primary" @click="dialogVisible = true">Submit Form</el-button>
       </el-form-item>
 
+    <!-- Form End -->
     </el-form>
 
     <!-- Popup Dialog to Confirm the Content -->
-    <el-dialog title="Confirmation" :visible.sync="dialogVisible" width="20%">
+    <el-dialog title="Confirmation"
+    :visible.sync="dialogVisible"
+    width="20%">
       <span>Submit Form?</span>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">Cancel</el-button>
